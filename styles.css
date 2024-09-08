@@ -1,0 +1,89 @@
+body {
+    background-color: #f2e6f2; /* Light pink background */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative; /* For absolute positioning of hearts */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* White bg with transparency */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* ensures container is above hearts */
+}
+
+.message {
+    color: #d5006d; /* A romantic pink color */
+}
+
+img {
+    max-width: 300px; /* Adjust the image size */
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #d5006d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a0004d; /* Darker pink on hover */
+}
+
+#number-buttons button {
+    margin: 5px;
+}
+
+.hearts {
+    position: absolute;
+    top: 20px; /* Adjust the position of hearts */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 0; /* Hearts behind the container */
+}
+
+.heart {
+    width: 50px;
+    height: 50px;
+    background-color: #d5006d; /* Heart color */
+    margin: 5px;
+    position: relative;
+    transform: rotate(-45deg);
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: #d5006d; /* Heart color */
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -25px; /* Position upper half */
+    left: 0;
+}
+
+.heart::after {
+    left: 25px; /* Position upper half */
+    top: 0;
+}
