@@ -19,7 +19,7 @@ function createNumberButtons() {
         button.innerText = i;
         button.onclick = function() {
             if (i > 8) {
-                alert("AWWWW, I MISSED YOU TOOO😘");
+                alert("AWWWW, I MISSED YOU TOOO");
             } else {
                 alert("OKAY");
             }
